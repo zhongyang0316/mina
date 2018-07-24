@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+  
+  	<parent>
+      	<groupId>org.springframework.boot</groupId>
+      	<artifactId>spring-boot-starter-parent</artifactId>
+      	<version>1.5.12.RELEASE</version>
+  	</parent>
+  
+  	<groupId>com.zy</groupId>
+  	<artifactId>mina</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  
+  	<packaging>pom</packaging>
+  
+  	<name>mina</name>
+  	<description>mina测试项目</description>
+  
+  	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		<mina.version>2.0.17</mina.version>
+	</properties>
+	
+	<modules>
+	    <module>mina-message</module>
+	    <module>mina-heartbeat</module>
+	</modules>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+		    	<groupId>org.apache.mina</groupId>
+		    	<artifactId>mina-core</artifactId>
+		    	<version>${mina.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
+
+

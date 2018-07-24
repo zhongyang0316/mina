@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+  
+  	<parent>
+    	<groupId>com.zy</groupId>
+    	<artifactId>mina</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<relativePath>..</relativePath>
+  	</parent>
+  	
+  	<artifactId>mina-message</artifactId>
+  	<packaging>jar</packaging>
+  	<name>mina-message</name>
+  	<description>mina通信测试工程</description>
+  	
+  	<dependencies>
+  	
+  		<dependency>  
+            <groupId>org.springframework.boot</groupId>  
+            <artifactId>spring-boot-starter</artifactId>  
+        </dependency>
+        
+  		<dependency>
+	    	<groupId>org.apache.mina</groupId>
+	    	<artifactId>mina-core</artifactId>
+		</dependency>
+		
+		<!-- External -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<!-- Database -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- Test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+  	</dependencies>
+  	
+  	<!-- 默认以依赖jar包方式发布，需要独立部署时，将此打开 -->
+	<!-- 	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+        			<executable>false</executable>
+    			</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	-->
+</project>
+
